@@ -103,9 +103,13 @@ class StreamlitApp:
            return values
           
           
-           def plot_pie_chart(self, probabilities):
+            def plot_pie_chart(self, probabilities):
                 fig = go.Figure(
-                data=[go.Pie(labels=list(data['cardio']),values=probabilities[0])])
+                data=[go.Pie(
+                    labels=list(data.target),
+                    values=probabilities[0]
+                            )]
+                         )
           fig = fig.update_traces(hoverinfo='label+percent',textinfo='value',textfont_size=15)
             return fig
 
