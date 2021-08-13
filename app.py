@@ -53,7 +53,7 @@ class StreamlitApp:
         petal_width =st.sidebar.text_input('Enter Weight', '')
         
         petal_width = st.sidebar.text_input('Enter ap_hi', '')
-        petal_width = st.text_input('Enter ap_lo', '')
+        petal_width = st.sidebar.text_input('Enter ap_lo', '')
         
         petal_width = st.sidebar.text_input('Enter cholesterol', '')
         petal_width = st.sidebar.text_input('Enter gluc', '')
