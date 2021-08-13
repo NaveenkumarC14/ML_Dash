@@ -103,30 +103,30 @@ class StreamlitApp:
            return values
           
           
-    def plot_pie_chart(self, probabilities):
-        fig = go.Figure(
-            data=[go.Pie(
+           def plot_pie_chart(self, probabilities):
+                fig = go.Figure(
+                data=[go.Pie(
                     labels=list(data['cardio']),
                     values=probabilities[0]
             )]
         )
-        fig = fig.update_traces(
+          fig = fig.update_traces(
             hoverinfo='label+percent',
             textinfo='value',
             textfont_size=15
         )
         return fig
 
-    def construct_app(self):
+           def construct_app(self):
 
-        self.train_data()
-        values = self.construct_sidebar()
+               self.train_data()
+               values = self.construct_sidebar()
 
-        values_to_predict = np.array(values).reshape(1, -1)
+               values_to_predict = np.array(values).reshape(1, -1)
 
-        prediction = self.model.predict(values_to_predict)
-        prediction_str = data.cardio[prediction[0]]
-        probabilities = self.model.predict_proba(values_to_predict)
+               prediction = self.model.predict(values_to_predict)
+               prediction_str = data.cardio[prediction[0]]
+               probabilities = self.model.predict_proba(values_to_predict)
 
         st.markdown(
             """
