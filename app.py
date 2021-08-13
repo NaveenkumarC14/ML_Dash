@@ -50,6 +50,6 @@ values = [sepal_length, sepal_width, petal_length, petal_width,petal_length,peta
 
         
 if st.sidebar.button("Predict"):
-  print(values)
+  values
           
   
