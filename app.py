@@ -43,55 +43,23 @@ class StreamlitApp:
             '<p class="header-style">Iris Data Classification</p>',
             unsafe_allow_html=True
         )
-        sepal_length = st.sidebar.selectbox(
-            f"Select {cols[0]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
+        sepal_length = st.text_input('Enter sepal_length', '')
 
-        sepal_width = st.sidebar.selectbox(
-            f"Select {cols[1]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
-
-        petal_length = st.sidebar.selectbox(
-            f"Select {cols[2]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
-
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[3]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
+        sepal_width =st.text_input('Enter sepal_length', '')
         
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[4]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[5]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
+
+        petal_length = st.text_input('Enter sepal_length', '')
+
+        petal_width =st.text_input('Enter sepal_length', '')
         
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[6]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[7]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[8]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[9]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
-        petal_width = st.sidebar.selectbox(
-            f"Select {cols[10]}",
-            st.sidebar.text_input('Enter sepal_length', '')
-        )
+        petal_width = st.text_input('Enter sepal_length', '')
+        petal_width = st.text_input('Enter sepal_length', '')
+        
+        petal_width = st.text_input('Enter sepal_length', '')
+        petal_width = st.text_input('Enter sepal_length', '')
+        petal_width = st.text_input('Enter sepal_length', '')
+        petal_width =st.text_input('Enter sepal_length', '')
+        petal_width = st.text_input('Enter sepal_length', '')
         
         
         
