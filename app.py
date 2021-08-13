@@ -43,23 +43,23 @@ class StreamlitApp:
             '<p class="header-style">Iris Data Classification</p>',
             unsafe_allow_html=True
         )
-        sepal_length = st.text_input('Enter sepal_length', '')
+        sepal_length = st.sidebar.text_input('Enter age', '')
 
-        sepal_width =st.text_input('Enter sepal_length', '')
+        sepal_width =st.sidebar.text_input('Gender', '')
         
 
-        petal_length = st.text_input('Enter sepal_length', '')
+        petal_length = st.sidebar.text_input('Enter Height', '')
 
-        petal_width =st.text_input('Enter sepal_length', '')
+        petal_width =st.sidebar.text_input('Enter Weight', '')
         
-        petal_width = st.text_input('Enter sepal_length', '')
-        petal_width = st.text_input('Enter sepal_length', '')
+        petal_width = st.sidebar.text_input('Enter ap_hi', '')
+        petal_width = st.text_input('Enter ap_lo', '')
         
-        petal_width = st.text_input('Enter sepal_length', '')
-        petal_width = st.text_input('Enter sepal_length', '')
-        petal_width = st.text_input('Enter sepal_length', '')
-        petal_width =st.text_input('Enter sepal_length', '')
-        petal_width = st.text_input('Enter sepal_length', '')
+        petal_width = st.sidebar.text_input('Enter cholesterol', '')
+        petal_width = st.sidebar.text_input('Enter gluc', '')
+        petal_width = st.sidebar.text_input('Enter smoke', '')
+        petal_width =st.sidebar.text_input('Enter alco', '')
+        petal_width = st.sidebar.text_input('Enter active', '')
         
         
         
