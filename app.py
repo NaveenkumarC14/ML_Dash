@@ -103,7 +103,7 @@ class StreamlitApp:
     def plot_pie_chart(self, probabilities):
         fig = go.Figure(
             data=[go.Pie(
-                    labels=list(data.target_names),
+                    labels=list(data['cardio']),
                     values=probabilities[0]
             )]
         )
