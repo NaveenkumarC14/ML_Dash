@@ -144,14 +144,14 @@ class StreamlitApp:
         )
     column_2.write(f"{probabilities[0][prediction[0]]}")
 
-        fig = self.plot_pie_chart(probabilities)
-        st.markdown(
+    fig = self.plot_pie_chart(probabilities)
+    st.markdown(
             '<p class="font-style" >Probability Distribution</p>',
             unsafe_allow_html=True
         )
-        st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
-        return self
+    return self
 
 
 sa = StreamlitApp()
