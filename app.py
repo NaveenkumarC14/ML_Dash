@@ -96,7 +96,7 @@ class StreamlitApp:
         
         
        
-        values = [sepal_length, sepal_width, petal_length, petal_width]
+        values = [sepal_length, sepal_width, petal_length, petal_width,petal_length,petal_length,petal_length,petal_length,petal_length,petal_length]
 
         return values
 
