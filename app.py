@@ -100,7 +100,9 @@ class StreamlitApp:
 
         
         if st.sidebar.button("Predict"):
-           return values()
+           return values
+          
+          
     def plot_pie_chart(self, probabilities):
         fig = go.Figure(
             data=[go.Pie(
