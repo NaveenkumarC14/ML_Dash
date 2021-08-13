@@ -100,7 +100,81 @@ class StreamlitApp:
 
         return values
 
-   
+    def plot_pie_chart(self, probabilities):
+        fig = go.Figure(
+            data=[go.Pie(
+                    labels=list(data.target_names),
+                    values=probabilities[0]
+            )]
+        )
+        fig = fig.update_traces(
+            hoverinfo='label+percent',
+            textinfo='value',
+            textfont_size=15
+        )
+        return fig
+
+    def construct_app(self):
+
+        self.train_data()
+        values = self.construct_sidebar()
+
+        values_to_predict = np.array(values).reshape(1, -1)
+
+        prediction = self.model.predict(values_to_predict)
+        prediction_str = data.cardio[prediction[0]]
+        probabilities = self.model.predict_proba(values_to_predict)
+
+        st.markdown(
+            """
+            <style>
+            .header-style {
+                font-size:25px;
+                font-family:sans-serif;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            """
+            <style>
+            .font-style {
+                font-size:20px;
+                font-family:sans-serif;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+        st.markdown(
+            '<p class="header-style"> Iris Data Predictions </p>',
+            unsafe_allow_html=True
+        )
+
+        column_1, column_2 = st.beta_columns(2)
+        column_1.markdown(
+            f'<p class="font-style" >Prediction </p>',
+            unsafe_allow_html=True
+        )
+        column_1.write(f"{prediction_str}")
+
+        column_2.markdown(
+            '<p class="font-style" >Probability </p>',
+            unsafe_allow_html=True
+        )
+        column_2.write(f"{probabilities[0][prediction[0]]}")
+
+        fig = self.plot_pie_chart(probabilities)
+        st.markdown(
+            '<p class="font-style" >Probability Distribution</p>',
+            unsafe_allow_html=True
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+        return self
+
 
 sa = StreamlitApp()
 sa.construct_app()
