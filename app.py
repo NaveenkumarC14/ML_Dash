@@ -62,6 +62,40 @@ class StreamlitApp:
             f"Select {cols[3]}",
             sorted(features[cols[3]].unique())
         )
+        
+        petal_width = st.sidebar.selectbox(
+            f"Select {cols[4]}",
+            sorted(features[cols[4]].unique())
+        )
+        petal_width = st.sidebar.selectbox(
+            f"Select {cols[5]}",
+            sorted(features[cols[5]].unique())
+        )
+        
+        petal_width = st.sidebar.selectbox(
+            f"Select {cols[6]}",
+            sorted(features[cols[6]].unique())
+        )
+        petal_width = st.sidebar.selectbox(
+            f"Select {cols[7]}",
+            sorted(features[cols[7]].unique())
+        )
+        petal_width = st.sidebar.selectbox(
+            f"Select {cols[8]}",
+            sorted(features[cols[8]].unique())
+        )
+        petal_width = st.sidebar.selectbox(
+            f"Select {cols[9]}",
+            sorted(features[cols[9]].unique())
+        )
+        petal_width = st.sidebar.selectbox(
+            f"Select {cols[10]}",
+            sorted(features[cols[10]].unique())
+        )
+        
+        
+        
+       
         values = [sepal_length, sepal_width, petal_length, petal_width]
 
         return values
