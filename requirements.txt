@@ -6,3 +6,4 @@ streamlit==0.68
 numpy
 requests
 anyjson==0.3
+seaborn
