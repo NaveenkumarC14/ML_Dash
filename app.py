@@ -131,12 +131,12 @@ class StreamlitApp:
                 font-size:25px;
                 font-family:sans-serif;
                  }
-               </style>
-            """,
-            unsafe_allow_html=True
-               )
+                   </style>
+                 """,
+                   unsafe_allow_html=True
+                       )
 
-        st.markdown(
+              st.markdown(
             """
             <style>
             .font-style {
@@ -146,7 +146,7 @@ class StreamlitApp:
             </style>
             """,
             unsafe_allow_html=True
-        )
+          )
         st.markdown(
             '<p class="header-style"> Iris Data Predictions </p>',
             unsafe_allow_html=True
