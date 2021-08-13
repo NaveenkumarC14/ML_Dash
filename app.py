@@ -10,7 +10,13 @@ from sklearn.model_selection import train_test_split
 data = pd.read_csv('https://raw.githubusercontent.com/NaveenkumarC14/Cardiovascular-Disease-EDA-and-Analytics/main/cardio_train.csv')
 # separate the data into features and target
 #data=data.drop('id',axis=1)
-features=data[['age','gender','height','weight','ap_hi','ap_lo','cholesterol','gluc','smoke','alco','active']]
+def calculate_age(days):
+  days_year = 365.2425
+  age = int(days // days_year)
+  return age
+data['age_new'] = data['age'].apply(lambda x: calculate_age(x))
+
+features=data[['age_new','gender','height','weight','ap_hi','ap_lo','cholesterol','gluc','smoke','alco','active']]
 target=data.iloc[:,-1].values
 
 
