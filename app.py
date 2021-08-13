@@ -115,7 +115,7 @@ class StreamlitApp:
             unsafe_allow_html=True
         )
 
-        st.markdown(
+     st.markdown(
             """
             <style>
             .font-style {
