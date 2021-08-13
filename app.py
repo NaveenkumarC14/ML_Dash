@@ -136,43 +136,43 @@ class StreamlitApp:
                    unsafe_allow_html=True
                        )
 
-              st.markdown(
-            """
-            <style>
-            .font-style {
-                font-size:20px;
-                font-family:sans-serif;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-          )
-        st.markdown(
-            '<p class="header-style"> Iris Data Predictions </p>',
-            unsafe_allow_html=True
-        )
+                st.markdown(
+                  """
+                   <style>
+                   .font-style {
+                     font-size:20px;
+                     font-family:sans-serif;
+                   }
+                    </style>
+                   """,
+                    unsafe_allow_html=True
+                        )
+                 st.markdown(
+                    '<p class="header-style"> Iris Data Predictions </p>',
+                      unsafe_allow_html=True
+                       )
 
-        column_1, column_2 = st.beta_columns(2)
-        column_1.markdown(
-            f'<p class="font-style" >Prediction </p>',
-            unsafe_allow_html=True
-        )
-        column_1.write(f"{prediction_str}")
+                 column_1, column_2 = st.beta_columns(2)
+                 column_1.markdown(
+                 f'<p class="font-style" >Prediction </p>',
+                 unsafe_allow_html=True
+                 )
+                 column_1.write(f"{prediction_str}")
 
-        column_2.markdown(
-            '<p class="font-style" >Probability </p>',
-            unsafe_allow_html=True
-        )
-        column_2.write(f"{probabilities[0][prediction[0]]}")
+                 column_2.markdown(
+                  '<p class="font-style" >Probability </p>',
+                   unsafe_allow_html=True
+                                    )
+                  column_2.write(f"{probabilities[0][prediction[0]]}")
 
-        fig = self.plot_pie_chart(probabilities)
-        st.markdown(
-            '<p class="font-style" >Probability Distribution</p>',
-            unsafe_allow_html=True
-        )
-        st.plotly_chart(fig, use_container_width=True)
+                  fig = self.plot_pie_chart(probabilities)
+                  st.markdown(
+                         '<p class="font-style" >Probability Distribution</p>',
+                       unsafe_allow_html=True
+                     )
+                  st.plotly_chart(fig, use_container_width=True)
 
-        return self
+                  return self
 
 
 sa = StreamlitApp()
