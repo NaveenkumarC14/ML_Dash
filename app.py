@@ -122,7 +122,7 @@ class StreamlitApp:
         values_to_predict = np.array(values).reshape(1, -1)
 
         prediction = self.model.predict(values_to_predict)
-        prediction_str = data.target_names[prediction[0]]
+        prediction_str = data.target[prediction[0]]
         probabilities = self.model.predict_proba(values_to_predict)
 
         st.markdown(
