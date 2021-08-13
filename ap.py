@@ -57,8 +57,9 @@ class StreamlitApp:
             sorted(features[cols[3]].unique())
         )
         values = [sepal_length, sepal_width, petal_length, petal_width]
-
-        return values
+        if st.sidebar.button("Predict"):
+           return values
+        
 
     def plot_pie_chart(self, probabilities):
         fig = go.Figure(
