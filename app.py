@@ -98,8 +98,9 @@ class StreamlitApp:
        
         values = [sepal_length, sepal_width, petal_length, petal_width,petal_length,petal_length,petal_length,petal_length,petal_length,petal_length,petal_length]
 
-        return values
-
+        
+        if st.button("Predict"):
+           return values()
     def plot_pie_chart(self, probabilities):
         fig = go.Figure(
             data=[go.Pie(
