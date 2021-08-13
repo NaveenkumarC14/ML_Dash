@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 
-iris_data = load_iris()
+iris_data = pd.read_csv('https://raw.githubusercontent.com/NaveenkumarC14/Cardiovascular-Disease-EDA-and-Analytics/main/cardio_train.csv')
 # separate the data into features and target
 features = pd.DataFrame(
     iris_data.data, columns=iris_data.feature_names
