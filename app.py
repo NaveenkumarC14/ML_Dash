@@ -111,7 +111,7 @@ class StreamlitApp:
                             )]
                          )
            fig = fig.update_traces(hoverinfo='label+percent',textinfo='value',textfont_size=15)
-                return fig
+               return fig
 
            def construct_app(self):
 
