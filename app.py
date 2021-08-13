@@ -126,7 +126,7 @@ class StreamlitApp:
 
                st.markdown(
                 """
-                <style>
+                 <style>
                 .header-style {
                 font-size:25px;
                 font-family:sans-serif;
@@ -136,7 +136,7 @@ class StreamlitApp:
                    unsafe_allow_html=True
                        )
 
-                st.markdown(
+               st.markdown(
                   """
                    <style>
                    .font-style {
