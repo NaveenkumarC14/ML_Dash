@@ -9,8 +9,8 @@ from sklearn.model_selection import train_test_split
 
 data = pd.read_csv('https://raw.githubusercontent.com/NaveenkumarC14/Cardiovascular-Disease-EDA-and-Analytics/main/cardio_train.csv')
 # separate the data into features and target
-data=data.drop('id',axis=1)
-features=data.iloc[:,:-1].values
+#data=data.drop('id',axis=1)
+features=data[['age','gender','height','weight','ap_hi','ap_lo','cholesterol','gluc','smoke','alco','active']]
 target=data.iloc[:,-1].values
 
 
