@@ -10,9 +10,9 @@ from sklearn.model_selection import train_test_split
 iris_data = pd.read_csv('https://raw.githubusercontent.com/NaveenkumarC14/Cardiovascular-Disease-EDA-and-Analytics/main/cardio_train.csv')
 # separate the data into features and target
 features = pd.DataFrame(
-    iris_data.data, columns=iris_data.feature_names
+    iris_data.cardio, columns=iris_data.feature_names
 )
-target = pd.Series(iris_data.target)
+target = pd.Series(iris_data.cardio)
 
 # split the data into train and test
 x_train, x_test, y_train, y_test = train_test_split(
