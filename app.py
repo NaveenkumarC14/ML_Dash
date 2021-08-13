@@ -124,8 +124,8 @@ class StreamlitApp:
                prediction_str = data.cardio[prediction[0]]
                probabilities = self.model.predict_proba(values_to_predict)
 
-               st.markdown(
-              """
+              st.markdown(
+            """
             <style>
             .header-style {
                 font-size:25px;
@@ -175,5 +175,5 @@ class StreamlitApp:
         return self
 
 
-   sa = StreamlitApp()
-   sa.construct_app()
+sa = StreamlitApp()
+sa.construct_app()
