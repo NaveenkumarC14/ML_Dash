@@ -125,7 +125,7 @@ class StreamlitApp:
                probabilities = self.model.predict_proba(values_to_predict)
 
                st.markdown(
-            """
+              """
             <style>
             .header-style {
                 font-size:25px;
@@ -175,5 +175,5 @@ class StreamlitApp:
         return self
 
 
-sa = StreamlitApp()
-sa.construct_app()
+   sa = StreamlitApp()
+   sa.construct_app()
