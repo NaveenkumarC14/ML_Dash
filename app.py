@@ -108,14 +108,14 @@ class StreamlitApp:
                 data=[go.Pie(
                     labels=list(data['cardio']),
                     values=probabilities[0]
-            )]
-        )
+                        )]
+                    )
           fig = fig.update_traces(
             hoverinfo='label+percent',
             textinfo='value',
             textfont_size=15
-        )
-        return fig
+              )
+            return fig
 
            def construct_app(self):
 
@@ -128,17 +128,17 @@ class StreamlitApp:
                prediction_str = data.cardio[prediction[0]]
                probabilities = self.model.predict_proba(values_to_predict)
 
-        st.markdown(
-            """
-            <style>
-            .header-style {
+            st.markdown(
+                """
+                <style>
+                .header-style {
                 font-size:25px;
                 font-family:sans-serif;
-            }
-            </style>
+                 }
+               </style>
             """,
             unsafe_allow_html=True
-        )
+               )
 
         st.markdown(
             """
