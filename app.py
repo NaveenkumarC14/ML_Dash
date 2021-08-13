@@ -151,7 +151,7 @@ class StreamlitApp:
         )
     st.plotly_chart(fig, use_container_width=True)
 
-      return self
+        return self
 
 
 sa = StreamlitApp()
