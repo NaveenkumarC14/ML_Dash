@@ -45,52 +45,52 @@ class StreamlitApp:
         )
         sepal_length = st.sidebar.selectbox(
             f"Select {cols[0]}",
-            sorted(features[cols[0]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
 
         sepal_width = st.sidebar.selectbox(
             f"Select {cols[1]}",
-            sorted(features[cols[1]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
 
         petal_length = st.sidebar.selectbox(
             f"Select {cols[2]}",
-            sorted(features[cols[2]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
 
         petal_width = st.sidebar.selectbox(
             f"Select {cols[3]}",
-            sorted(features[cols[3]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         
         petal_width = st.sidebar.selectbox(
             f"Select {cols[4]}",
-            sorted(features[cols[4]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         petal_width = st.sidebar.selectbox(
             f"Select {cols[5]}",
-            sorted(features[cols[5]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         
         petal_width = st.sidebar.selectbox(
             f"Select {cols[6]}",
-            sorted(features[cols[6]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         petal_width = st.sidebar.selectbox(
             f"Select {cols[7]}",
-            sorted(features[cols[7]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         petal_width = st.sidebar.selectbox(
             f"Select {cols[8]}",
-            sorted(features[cols[8]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         petal_width = st.sidebar.selectbox(
             f"Select {cols[9]}",
-            sorted(features[cols[9]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         petal_width = st.sidebar.selectbox(
             f"Select {cols[10]}",
-            sorted(features[cols[10]].unique())
+            st.text_input('Enter sepal_length', ''))
         )
         
         
@@ -105,7 +105,7 @@ class StreamlitApp:
     def plot_pie_chart(self, probabilities):
         fig = go.Figure(
             data=[go.Pie(
-                    labels=list(data.target),
+                    labels=list(data['cardio']),
                     values=probabilities[0]
             )]
         )
@@ -124,7 +124,7 @@ class StreamlitApp:
         values_to_predict = np.array(values).reshape(1, -1)
 
         prediction = self.model.predict(values_to_predict)
-        prediction_str = data.target[prediction[0]]
+        prediction_str = data['cardio'][prediction[0]]
         probabilities = self.model.predict_proba(values_to_predict)
 
         st.markdown(
