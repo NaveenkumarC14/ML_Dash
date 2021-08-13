@@ -110,11 +110,7 @@ class StreamlitApp:
                     values=probabilities[0]
                         )]
                     )
-          fig = fig.update_traces(
-            hoverinfo='label+percent',
-            textinfo='value',
-            textfont_size=15
-              )
+          fig = fig.update_traces(hoverinfo='label+percent',textinfo='value',textfont_size=15)
             return fig
 
            def construct_app(self):
