@@ -103,7 +103,7 @@ class StreamlitApp:
            return values
           
           
-           def plot_pie_chart(self, probabilities):
+    def plot_pie_chart(self, probabilities):
                 fig = go.Figure(
                 data=[go.Pie(
                     labels=list(data.target),
