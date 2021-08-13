@@ -8,4 +8,4 @@ requests
 anyjson==0.3
 seaborn
 predict
-model_methods
+
