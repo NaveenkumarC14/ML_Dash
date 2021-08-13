@@ -17,7 +17,7 @@ def calculate_age(days):
 data['age_new'] = data['age'].apply(lambda x: calculate_age(x))
 
 features=data[['age_new','gender','height','weight','ap_hi','ap_lo','cholesterol','gluc','smoke','alco','active']]
-target=data.iloc[:,-1].values
+target=data['cardio']
 
 
 # split the data into train and test
