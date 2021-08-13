@@ -46,7 +46,7 @@ petal_width7 = st.sidebar.text_input('Enter active', '')
         
         
        
-values = [sepal_length, sepal_width, petal_length, petal_width,petal_length1,petal_length2,petal_length3,petal_length4,petal_length5,petal_length6,petal_length7]
+values = [sepal_length, sepal_width, petal_length, petal_width,petal_width1,petal_width2,petal_width3,petal_width4,petal_width5,petal_width6,petal_width7]
 
         
 if st.sidebar.button("Predict"):
