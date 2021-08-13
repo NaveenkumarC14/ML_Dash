@@ -126,7 +126,7 @@ class StreamlitApp:
             """,
             unsafe_allow_html=True
         )
-     st.markdown(
+    st.markdown(
             '<p class="header-style"> Iris Data Predictions </p>',
             unsafe_allow_html=True
         )
